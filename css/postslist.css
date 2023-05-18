@@ -1,0 +1,157 @@
+body{
+    background-color:#ffeedd;
+}
+
+
+  /*post*/
+.main{
+    margin-top: 20px;
+    margin-left:100px;
+    font-family: 'system-ui';
+}
+
+  .container{
+     border-radius:10px;
+     background: #fff;
+     display:inline-flex;
+     width:42%;
+     height:23vh;
+     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+     margin:10px;
+     margin-right:65px;
+     margin-top:7px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .container:hover{
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+
+ }
+
+  .left-side{
+    padding:10px;
+  }
+  .left-side p{
+  color:rgb(97, 97, 97);
+  text-align: center;
+  font-weight: bold;
+  transform: translate(1px,18px);
+  font-size: 17px;
+
+  }
+  .title .icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+    color: rgb(133, 131, 131); ;
+  }
+
+.right-side{
+    background-color: #f3efef;
+}
+
+.title{
+    display: flex;
+    margin-left:10px;
+
+}
+
+.title p{
+    color:rgb(146, 144, 144);
+    margin :10px 10px 12px 0px ;
+    padding-right:20px;
+    font-size: 17px;
+    font-weight: 500;
+
+  }
+
+  .title .icon{
+   margin:5px 15px 15px 0px;
+   padding:5px;
+   font-size: 15px;
+  }
+.bottom{
+    display: flex;
+    margin-bottom:30px;
+}
+
+.bottom .content p{
+    color:black;
+    margin:0px 25px 10px 10px;
+    padding-bottom:10px;
+    font-size: 15px;
+  }
+.bottom .icon{
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(133, 131, 131); 
+
+}
+
+.center-container {
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, 0%);
+}
+
+
+.center-container-margin-change {
+  margin-right: 65px;
+  margin-left:10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.mod {
+  background-color: white;
+  border: 1px solid black;
+  padding: 15px 20px 20px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.mod p{
+  margin-bottom:30px;
+  margin-top:0px;
+
+}
+
+.modal-buttons {
+  margin-top: 10px;
+}
+
+.btn-yes {
+  background-color: green;
+  color: white;
+  padding: 10px 35px;
+  margin-right: 160px;
+  border:none;
+  margin-bottom:10px;
+}
+
+.btn-no {
+  background-color: red;
+  color: white;
+  padding: 10px 35px;
+  border:none;
+
+}
+
+.show {
+  display: block;
+}
