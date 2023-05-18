@@ -122,3 +122,11 @@
     color: pink;
     margin-bottom: 5px;
   }
+
+  #post-title{
+    box-sizing: border-box;
+  }
+
+  #post-text{
+    box-sizing: border-box;
+  }

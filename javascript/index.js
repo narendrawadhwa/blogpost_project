@@ -1,6 +1,6 @@
 // opening part B that is Post List
 function openPostList() {
-  window.location.href = "postslist.html"; 
+  window.location.href = "../upgrad_project/html/postslist.html"; 
 }
 
 
@@ -31,3 +31,5 @@ window.onclick = function(event) {
     createPost.style.display = "none";
   }
 }
+
+

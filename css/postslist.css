@@ -90,9 +90,13 @@ body{
     right: 15px;
     font-size: 20px;
     color: rgb(133, 131, 131); 
+    cursor: pointer;
 
 }
+.icon:hover{
+    color: rgb(53, 53, 53); 
 
+}
 .center-container {
   top: 50%;
   left: 43%;
