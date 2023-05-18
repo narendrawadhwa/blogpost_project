@@ -1,0 +1,124 @@
+ .post {
+    text-align: center;
+    font-family:serif;
+    margin:20px;
+  }
+  .post p{
+    font-size: 10px;
+    text-align: justify;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin : 15px 0px;
+  }
+  .author span{
+    font-size: 18px;
+  }
+  .edit-btn {
+    margin-left: auto;
+    background: rgb(255, 58, 91);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    padding : 8px 20px;
+    font-size:15px;
+  }
+
+  .edit-btn:hover > {
+
+  }
+  
+  .like-section {
+    margin: 20px;
+    margin-left:0px;
+   
+  }
+  
+  .like-btn {
+    cursor: pointer;
+    background: rgb(255, 58, 91);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    padding : 8px 15px;
+    font-size:15px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .like-btn i{
+    margin-right:7px;
+
+  }
+  .like-info {
+  margin-top:10px;
+  padding-top:10px;
+  }
+  
+  .comment-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 70%;
+
+
+  }
+  .comment-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .comment-input {
+    width:850px;
+    margin-bottom:15px;
+  }
+  
+  .comment-btn {
+    cursor: pointer;
+    background: rgb(255, 58, 91);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    padding : 8px 20px;
+    font-size:15px;
+    
+  }
+  
+  .all-comments {
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    width:850px;
+    text-align: left;
+    font-size: 15px;
+
+  }
+  
+  .comment {
+    background-color: white;
+    margin-bottom: 5px;
+    padding: 15px;
+  }
+  
+
+  .editable {
+    border: 2px solid pink;
+    padding: 5px;
+  }
+  .updated-label {
+    display: block;
+    font-weight: bold;
+    color: pink;
+    margin-bottom: 5px;
+  }

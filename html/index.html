@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/common.css">
+
+    <!-- TODO: Include Font Awesome file here -->
+    <script src="https://kit.fontawesome.com/af0832aa35.js" crossorigin="anonymous"></script>
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- TODO: Include all your code for the header and home page here -->
+<header class="header">
+    <div class="left">
+    <div class="logo">
+        ScriBBler
+    </div>
+    <div class="subheading">
+    Explore, Imagine, Create
+    </div>
+    </div>
+    <div class="containers">
+        <div class="signup">
+            <button id="signup-btn">Sign Up</button>
+        </div>
+        <div class="signin">
+           <button id="signin-btn">Sign In</button>
+        </div>
+    </div>
+</header>
+
+<!-- Sign Up Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="top">
+      <span class="close icon">  <!-- Close Button -->
+      <i class="fa-sharp fa-solid fa-xmark"></i> </span>
+      <span class="get-started">Get Started</span>
+      <hr class="rounded" color="grey" size="2" style="dashed"> <!-- Line below get started-->
+      </div>
+      <form method="post" id="my-form"> 
+        <!-- Accepting Details -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username"  placeholder="Enter your username" required>
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"  oninput="removeErrorClass()"placeholder="Enter your password" required>
+  
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" oninput="removeErrorClass()" placeholder="Re-enter your password" required>
+  
+        <button type="submit" onclick="validatePassword(event)">Sign Up</button>
+        <div id="message"></div>
+
+      </form>
+    </div>
+  </div>
+
+
+<!-- Sign In Modal -->
+
+  <div id="myModals" class="modals">
+
+    <!-- Modal content -->
+    <div class="modal-contents">
+      <div class="top">
+      <span class="close-btn icon"> <!-- Close Button -->
+      <i class="fa-sharp fa-solid fa-xmark" ></i> </span>
+      <span class="welcome-back">Welcome Back!</span> 
+      <hr class="rounded" color="grey" size="2" style="dashed"> <!-- Line below get started-->
+
+      </div>
+      <form>
+        <!-- Accepting Details -->
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+  
+        <button type="submit">Sign In</button>
+        <span class="not-member">Not a member? <a href="#" id="openFormLink" onclick="openModal()">Sign Up</a>
+        </span>
+      </form>
+    </div>
+  </div>
+  
+<!-- Content in Middle  -->
+<!-- All Post -->
+
+<div class="post">
+  <div class="all-post">
+    <button  onclick="openPostList()">All Posts</button>
+  </div>
+  <!-- Create Post -->
+  <div class="create-pst">
+    <button id="post-btn">Create Post</button>
+  </div>
+</div>
+
+
+  <!-- Create Post Modal content -->
+
+<div id="newPost" class="createPost">
+  <div class="modalContent">
+    <div class="top">
+    <span class="close-button icon">
+    <i class="fa-sharp fa-solid fa-xmark" ></i> </span>
+    <span class="title">Pen Your Post</span>
+    <hr class="rounded" color="grey" size="2" style="dashed">
+
+    </div>
+    <form>
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter title of your post" required>
+
+      <label for="contents">Contents</label>
+      <textarea rows="13" cols="30" placeholder="Enter the content of your post"  required></textarea>
+      <button type="submit">Create</button>
+      </span>
+    </form>
+  </div>
+</div>
+</body>
+<script src="../javascript/index.js"></script>
+<script src="../javascript/common.js"></script>
+</html>
