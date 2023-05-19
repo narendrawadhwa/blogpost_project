@@ -27,38 +27,68 @@ window.onclick = function(event) {
 
 
 
-function validatePassword(event) {
+
+//this function is for validating details
+function validateDetails(event) {
   event.preventDefault(); // Prevent form submission
-  
+
   var password = document.getElementById("password");
   var confirmPassword = document.getElementById("confirm-password");
+  var username = document.getElementById("username");
+  var name = document.getElementById("name");
   var messageField = document.getElementById("message");
-  
-  // Define the regular expression pattern
-  var pattern = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-  
-  if (password.value !== confirmPassword.value) {
-    password.classList.add("error"); // Add error class to password input
-    confirmPassword.classList.add("error"); // Add error class to password input
-    messageField.innerHTML = "Password and Confirm Password must match.";
-  } else if (!pattern.test(password.value)) {
-    password.classList.add("error"); // Add error class to password input
-    messageField.innerHTML = "Password must be at least 8 characters long and contain special characters.";
-  } else {
-    password.classList.remove("error"); // Remove error class from password input
-    messageField.innerHTML = "Password is valid. Form will be submitted.";
-    
-    // Here you can add code to submit the form or perform other actions
-    document.getElementById("my-form").submit(); // Submit the form
-    document.getElementById("my-form").reset(); // Reset the form
-    document.getElementById("my-form").style.display = "none"; // Hide the form
-  }
-}
 
-function removeErrorClass() {
-  this.classList.remove("error"); // Remove error class on input
-  var messageField = document.getElementById("message");
-  messageField.innerHTML = ""; // Clear the message field
+  // Define the regular expression patterns
+  var passwordPattern = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+  var usernamePattern = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/;
+  var namePattern = /^[a-zA-Z]+$/;
+
+  if (!namePattern.test(name.value)) {
+    name.classList.add("error"); // Add error class to name input
+    password.classList.remove("error"); // Remove error class from password input
+    confirmPassword.classList.remove("error"); // Remove error class from confirm password input
+    username.classList.remove("error"); // Remove error class from username input
+    messageField.innerHTML = "Name must contain only alphabets."
+  }
+   else if (!usernamePattern.test(username.value)) {
+    username.classList.add("error"); // Add error class to username input
+    password.classList.remove("error"); // Remove error class from password input
+    confirmPassword.classList.remove("error"); // Remove error class from confirm password input
+    name.classList.remove("error"); // Remove error class from name input
+    messageField.innerHTML = "Username must be a combination of letters and numbers.";
+  }
+   else if (password.value !== confirmPassword.value) {
+    password.classList.add("error"); // Add error class to password input
+    confirmPassword.classList.add("error"); // Add error class to confirm password input
+    username.classList.remove("error"); // Remove error class from username input
+    name.classList.remove("error"); // Remove error class from name input
+    messageField.innerHTML = "Password and Confirm Password must match." ;
+  } 
+   else if (!passwordPattern.test(password.value)) {
+    password.classList.add("error"); // Add error class to password input
+    confirmPassword.classList.remove("error"); // Remove error class from confirm password input
+    username.classList.remove("error"); // Remove error class from username input
+    name.classList.remove("error"); // Remove error class from name input
+    messageField.innerHTML = "Password must be at least 8 characters long and contain special characters.";
+  } 
+  else {
+    password.classList.remove("error"); // Remove error class from password input
+    confirmPassword.classList.remove("error"); // Remove error class from confirm password input
+    username.classList.remove("error"); // Remove error class from username input
+    name.classList.remove("error"); // Remove error class from name input
+    messageField.innerHTML = "Thank you for your details! You have successfully signed up";
+    messageField.style.color = "blue"; // Set the color of the message to blue
+
+    // Delay before closing the signup modal
+    setTimeout(function() {
+      var signupModal = document.getElementById("myModal");
+      signupModal.style.display = "none"; // Close the signup modal
+
+      var signinModal = document.getElementById("myModals");
+      signinModal.style.display = "block"; // Open the signin modal
+    }, 1000); // Adjust the delay time (in milliseconds) as needed
+
+  }
 }
 
 
@@ -98,4 +128,44 @@ function openModal() {
 
   modal.style.display = "block";
   modals.style.display= "none";
+}
+
+
+
+
+//this function is for checking signin details
+function checkDetails(event) {
+  event.preventDefault(); // Prevent form submission
+
+  var password = document.getElementById("passwords");
+  var username = document.getElementById("usernames");
+  var message = document.getElementById("messageForsignin");
+
+  // Define the regular expression patterns
+  var passwordPattern = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+  var usernamePattern = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/;
+
+   if (!usernamePattern.test(username.value)) {
+    username.classList.add("errors"); // Add error class to username input
+    password.classList.remove("errors"); // Remove error class from password input
+    message.innerHTML = "Username must be a combination of letters and numbers.";
+  }
+   else if (!passwordPattern.test(password.value)) {
+    password.classList.add("errors"); // Add error class to password input
+    username.classList.remove("errors"); // Remove error class from username input
+    message.innerHTML = "Password must be at least 8 characters long and contain special characters.";
+  } 
+  else {
+    password.classList.remove("errors"); // Remove error class from password input
+    username.classList.remove("errors"); // Remove error class from username input
+    message.innerHTML = "Thank you for your details! You have successfully logged in";
+    message.style.color = "blue"; // Set the color of the message to blue
+
+    // Delay before closing the signin modal
+    setTimeout(function() {
+      var signinModal = document.getElementById("myModals");
+      signinModal.style.display = "none"; // Open the signin modal
+    }, 800); // Adjust the delay time (in milliseconds) as needed
+
+  }
 }

@@ -122,7 +122,8 @@ border-radius: 5px;
    font-size: 15px;
    box-sizing: border-box;
  }
- .modal-content form input:focus {
+/* this will make outline as 0 */
+input:focus {
   outline: none;
 }
 
@@ -240,4 +241,15 @@ border-radius: 5px;
  .not-member a{
   text-decoration: none;
   color:blue;
+  }
+
+
+  .errors {
+    border: 2px solid red !important;
+  }
+
+  #messageForsignin{
+    font-size:15px;
+    color:red;
+    font-weight: bold;
   }

@@ -101,7 +101,10 @@ border-radius: 5px;
   font-size: 15px;
 }
 
-
+.modalContent form input:focus,
+.modalContent form textarea:focus{
+  outline: none;
+}
 .modalContent form button{
   margin:15px 0px;
   height:35px;
@@ -129,3 +132,4 @@ border-radius: 5px;
 .icon:hover {
   color:#0f0f0f;
 }
+

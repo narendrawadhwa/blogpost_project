@@ -53,12 +53,12 @@
         <input type="text" id="username" name="username"  placeholder="Enter your username" required>
   
         <label for="password">Password</label>
-        <input type="password" id="password" name="password"  oninput="removeErrorClass()"placeholder="Enter your password" required>
+        <input type="password" id="password" name="password"  placeholder="Enter your password" required>
   
         <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirm-password" oninput="removeErrorClass()" placeholder="Re-enter your password" required>
+        <input type="password" id="confirm-password" name="confirm-password"  placeholder="Re-enter your password" required>
   
-        <button type="submit" onclick="validatePassword(event) ">Sign Up</button>
+        <button type="submit" onclick="validateDetails(event)">Sign Up</button>
         <div id="message"></div>
 
       </form>
@@ -79,17 +79,19 @@
       <hr class="rounded" color="grey" size="2" style="dashed"> <!-- Line below get started-->
 
       </div>
-      <form>
+      <form method="post">
         <!-- Accepting Details -->
         <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <input type="text" id="usernames" name="username" placeholder="Enter your username" required>
   
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <input type="password" id="passwords" name="password" placeholder="Enter your password" required>
   
-        <button type="submit">Sign In</button>
+        <button type="submit" onclick="checkDetails(event)">Sign In</button>
         <span class="not-member">Not a member? <a href="#" id="openFormLink" onclick="openModal()">Sign Up</a>
         </span>
+        <div id="messageForsignin"></div>
+
       </form>
     </div>
   </div>
@@ -119,15 +121,18 @@
     <hr class="rounded" color="grey" size="2" style="dashed">
 
     </div>
-    <form>
+    <form method="post">
       <label for="title">Title</label>
       <input type="text" id="title" name="title" placeholder="Enter title of your post" required>
-
+    
       <label for="contents">Contents</label>
-      <textarea rows="13" cols="30" placeholder="Enter the content of your post"  required></textarea>
-      <button type="submit">Create</button>
-      </span>
+      <textarea rows="13" cols="30" id="myTextarea" oninput="countWords()" placeholder="Enter the content of your post" required></textarea>
+      <p id="wordCount" style="font-size: 15px; display: inline-block;">Word Count: 0</p>
+      <div id="warningMessage" style="display: none; color: red; font-size: 15px;">Word count is below the minimum limit!</div>
+    
+      <button type="submit" onclick="showWarningMessage()">Create</button>
     </form>
+    
   </div>
 </div>
 </body>

@@ -33,3 +33,41 @@ window.onclick = function(event) {
 }
 
 
+
+
+
+
+
+function countWords() {
+  var textarea = document.getElementById("myTextarea");
+  var wordCount = document.getElementById("wordCount");
+  
+  // Split the textarea value by whitespace to count words
+  var words = textarea.value.trim().split(/\s+/);
+  
+  // Display the word count or 0 if there is no input
+  var count = textarea.value.trim() !== "" ? words.length : 0;
+  wordCount.textContent = "Word Count: " + count;
+}
+
+function showWarningMessage() {
+  var textarea = document.getElementById("myTextarea");
+  var warningMessage = document.getElementById("warningMessage");
+  
+  // Split the textarea value by whitespace to count words
+  var words = textarea.value.trim().split(/\s+/);
+  
+  // Check if the word count is below the minimum limit (e.g., 10)
+  if (words.length < 10) {
+    warningMessage.textContent = "Word count is below the minimum limit!";
+    warningMessage.style.display = "block"; // Display the warning message
+  } else if (words.length > 100) {
+    warningMessage.textContent = "Word count has exceeded the maximum limit!";
+    warningMessage.style.display = "block"; // Display the warning message
+  } else {
+    warningMessage.style.display = "none"; // Hide the warning message
+  }
+}
+
+
+
