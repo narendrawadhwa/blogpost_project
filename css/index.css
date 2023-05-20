@@ -143,3 +143,8 @@ border-radius: 5px;
   opacity: 0;
   pointer-events: none;
 }
+
+
+.error {
+  border: 2px solid red !important;
+}

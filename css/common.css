@@ -153,10 +153,6 @@ input:focus {
     font-weight: bold;
   }
 
-  .modal.closed{
-    opacity: 0;
-    pointer-events: none;
-  }
 
 
 /*  Sign In Form  */
@@ -258,11 +254,6 @@ input:focus {
   color:rgb(113, 113, 255);
   }
 
-
-  .errors {
-    border: 2px solid red !important;
-  }
-
   #messageForsignin{
     font-size:15px;
     color:red;
@@ -270,7 +261,3 @@ input:focus {
   }
 
   
-  .modals.closed{
-    opacity: 0;
-    pointer-events: none;
-  }

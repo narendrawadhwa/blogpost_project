@@ -35,8 +35,7 @@ window.onclick = function(event) {
 
 
 
-
-
+//word count
 
 function countWords() {
   var textarea = document.getElementById("myTextarea");
@@ -50,9 +49,13 @@ function countWords() {
   wordCount.textContent = "Word Count: " + count;
 }
 
+
+//will show warning message and if all conditions satisfied close the form
 function showWarningMessage() {
   var textarea = document.getElementById("myTextarea");
   var warningMessage = document.getElementById("warningMessage");
+  var title = document.getElementById("title");
+
   
   // Split the textarea value by whitespace to count words
   var words = textarea.value.trim().split(/\s+/);
@@ -61,9 +64,13 @@ function showWarningMessage() {
   if (words.length < 10) {
     warningMessage.textContent = "Word count is below the minimum limit!";
     warningMessage.style.display = "block"; // Display the warning message
-  } else if (words.length > 100) {
+    textarea.classList.add("error"); // Add error class to textarea input
+    title.classList.remove("error"); // Remove error class from title input
+  } else if (words.length > 50) {
     warningMessage.textContent = "Word count has exceeded the maximum limit!";
     warningMessage.style.display = "block"; // Display the warning message
+    textarea.classList.add("error"); // Add error class to textarea input
+    title.classList.remove("error"); // Remove error class from title input
   } else {
     var title = document.getElementById("title");
     
@@ -71,11 +78,15 @@ function showWarningMessage() {
     if (title.value.trim() === "") {
       warningMessage.textContent = "Title is required!";
       warningMessage.style.display = "block"; // Display the warning message
+      textarea.classList.remove("error"); // Add error class to textarea input
+      title.classList.add("error"); // Remove error class from title input
     } else {
-      warningMessage.style.display = "none"; // Hide the warning message 
-      
-      var form = document.getElementById("newPost");
-      form.classList.add("closed");
+      warningMessage.textContent = "Post created successfully";
+      warningMessage.style.display = "block"; // Hide the warning message 
+      warningMessage.style.color = "blue"; // Hide the warning message 
+      textarea.classList.remove("error"); // Add error class to textarea input
+      title.classList.remove("error"); // Remove error class from title input
+
     }
   }
 }
