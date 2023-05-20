@@ -143,18 +143,7 @@ input:focus {
 
   }
 
-  .error {
-    border: 2px solid red !important;
-  }
-
-  #message{
-    font-size:15px;
-    color:red;
-    font-weight: bold;
-  }
-
-
-
+ 
 /*  Sign In Form  */
  /* Hidden by default */ 
 .modals {
@@ -254,10 +243,4 @@ input:focus {
   color:rgb(113, 113, 255);
   }
 
-  #messageForsignin{
-    font-size:15px;
-    color:red;
-    font-weight: bold;
-  }
 
-  
