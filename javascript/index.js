@@ -65,11 +65,18 @@ function showWarningMessage() {
     warningMessage.textContent = "Word count has exceeded the maximum limit!";
     warningMessage.style.display = "block"; // Display the warning message
   } else {
-    warningMessage.style.display = "none"; // Hide the warning message
-    form.style.display = "none";
-
+    var title = document.getElementById("title");
+    
+    // Check if the title field is empty
+    if (title.value.trim() === "") {
+      warningMessage.textContent = "Title is required!";
+      warningMessage.style.display = "block"; // Display the warning message
+    } else {
+      warningMessage.style.display = "none"; // Hide the warning message 
+      
+      var form = document.getElementById("newPost");
+      form.classList.add("closed");
+    }
   }
 }
-
-
 

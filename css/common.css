@@ -64,6 +64,8 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    transition: opacity 0.3s ease;
+    opacity: 1;
   }
 
    /* Modal Content/Box */
@@ -151,6 +153,12 @@ input:focus {
     font-weight: bold;
   }
 
+  .modal.closed{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+
 /*  Sign In Form  */
  /* Hidden by default */ 
 .modals {
@@ -163,6 +171,8 @@ input:focus {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    transition: opacity 0.3s ease;
+    opacity: 1;
   }
   
   .modal-contents {
@@ -243,6 +253,11 @@ input:focus {
   color:blue;
   }
 
+.not-member a:hover{
+  text-decoration: none;
+  color:rgb(113, 113, 255);
+  }
+
 
   .errors {
     border: 2px solid red !important;
@@ -252,4 +267,10 @@ input:focus {
     font-size:15px;
     color:red;
     font-weight: bold;
+  }
+
+  
+  .modals.closed{
+    opacity: 0;
+    pointer-events: none;
   }

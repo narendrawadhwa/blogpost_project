@@ -121,16 +121,16 @@
     <hr class="rounded" color="grey" size="2" style="dashed">
 
     </div>
-    <form method="post">
+    <form method="post" id="createForm">
       <label for="title">Title</label>
       <input type="text" id="title" name="title" placeholder="Enter title of your post" required>
     
       <label for="contents">Contents</label>
-      <textarea rows="13" cols="30" id="myTextarea" oninput="countWords()" placeholder="Enter the content of your post" required></textarea>
+      <textarea rows="10" cols="30" id="myTextarea" oninput="countWords()" placeholder="Enter the content of your post" required></textarea>
       <p id="wordCount" style="font-size: 15px; display: inline-block;">Word Count: 0</p>
-      <div id="warningMessage" style="display: none; color: red; font-size: 15px;">Word count is below the minimum limit!</div>
+      <div id="warningMessage" style="display: none; color: red; font-size: 15px;"></div>
     
-      <button type="submit" onclick="showWarningMessage()">Create</button>
+      <button type="button" onclick="showWarningMessage()">Create</button>
     </form>
     
   </div>

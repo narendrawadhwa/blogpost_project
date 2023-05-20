@@ -15,13 +15,13 @@ btn.onclick = function() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  modal.classList.add("closed");
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.classList.add("closed");
   }
 }
 
@@ -81,12 +81,12 @@ function validateDetails(event) {
 
     // Delay before closing the signup modal
     setTimeout(function() {
-      var signupModal = document.getElementById("myModal");
-      signupModal.style.display = "none"; // Close the signup modal
+      modal.classList.add("closed");
+      // Close the signup modal
 
       var signinModal = document.getElementById("myModals");
       signinModal.style.display = "block"; // Open the signin modal
-    }, 1000); // Adjust the delay time (in milliseconds) as needed
+    }, 500); // Adjust the delay time (in milliseconds) as needed
 
   }
 }
@@ -127,7 +127,7 @@ function openModal() {
   var modal = document.getElementById("myModal");
 
   modal.style.display = "block";
-  modals.style.display= "none";
+  modals.classList.add("closed");
 }
 
 
@@ -163,9 +163,9 @@ function checkDetails(event) {
 
     // Delay before closing the signin modal
     setTimeout(function() {
-      var signinModal = document.getElementById("myModals");
-      signinModal.style.display = "none"; // Open the signin modal
-    }, 800); // Adjust the delay time (in milliseconds) as needed
+      modals.classList.add("closed");
+      // Open the signin modal
+    }, 500); // Adjust the delay time (in milliseconds) as needed
 
   }
 }

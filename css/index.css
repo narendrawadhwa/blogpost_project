@@ -40,7 +40,12 @@
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  pointer-events: auto;
 }
+
+
 
 /* Modal Content/Box */
 .modalContent {
@@ -50,7 +55,7 @@
   border: 1px solid #888;
   width: 80%; 
   font-family: 'Century Gothic';
-  margin-top :40px;
+  margin-top :30px;
 }
 
 .title{
@@ -133,3 +138,8 @@ border-radius: 5px;
   color:#0f0f0f;
 }
 
+
+.createPost.closed {
+  opacity: 0;
+  pointer-events: none;
+}
