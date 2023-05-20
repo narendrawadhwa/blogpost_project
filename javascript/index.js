@@ -66,6 +66,8 @@ function showWarningMessage() {
     warningMessage.style.display = "block"; // Display the warning message
   } else {
     warningMessage.style.display = "none"; // Hide the warning message
+    form.style.display = "none";
+
   }
 }
 
