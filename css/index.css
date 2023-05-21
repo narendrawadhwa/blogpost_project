@@ -1,5 +1,5 @@
  body{
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.jpg"); /* setting background image */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -137,8 +137,7 @@ border-radius: 5px;
 .icon:hover {
   color:#0f0f0f;
 }
-
-
+  /* Setting border in case details not filled as per requirement */ 
 
 
 .error {

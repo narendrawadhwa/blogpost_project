@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
 }
+/* this is left side of header containing header scribbler and subheading*/
 .left{
     display: flex;
     justify-content: space-between;
@@ -18,12 +19,16 @@
 
 }
 
+/*Scribbler*/
+
 .logo{
     font-family: 'Montez', cursive;
     font-size: 2em;
     color: blue;
     margin-left:-30%;
 }
+/* signin signup buttons*/
+
 .containers {
     display: flex;
   }

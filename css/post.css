@@ -1,18 +1,11 @@
-.post {
-    text-align: center;
-    font-family:serif;
-    margin:20px;
-  }
-  .post p{
-    font-size: 10px;
-    text-align: justify;
-  }
 
+  /* title of page */ 
   h2 {
     font-size: 22px;
     font-weight: bold;
   }
-  
+
+   /* author */ 
   .author {
     display: flex;
     justify-content: flex-start;
@@ -22,6 +15,8 @@
   .author span{
     font-size: 18px;
   }
+
+     /* edit button */ 
   .edit-btn {
     margin-left: auto;
     background: rgb(255, 58, 91);
@@ -36,7 +31,24 @@
   .edit-btn:hover > {
 
   }
-  
+   /* on clicking edit button, title and content will have pink border  */
+
+  .editable {
+    border: 2px solid pink;
+    padding: 5px;
+  }
+   /* post content */
+  .post {
+    text-align: center;
+    font-family:serif;
+    margin:20px;
+  }
+  .post p{
+    font-size: 10px;
+    text-align: justify;
+  }
+
+     /* like button */ 
   .like-section {
     margin: 20px;
     margin-left:0px;
@@ -64,6 +76,7 @@
   padding-top:10px;
   }
   
+     /* comment section */ 
   .comment-section {
     margin-top: 10px;
     display: flex;
@@ -111,11 +124,6 @@
     padding: 15px;
   }
   
-
-  .editable {
-    border: 2px solid pink;
-    padding: 5px;
-  }
   .updated-label {
     display: block;
     font-weight: bold;
