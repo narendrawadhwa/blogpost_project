@@ -139,10 +139,6 @@ border-radius: 5px;
 }
 
 
-.createPost.closed {
-  opacity: 0;
-  pointer-events: none;
-}
 
 
 .error {
