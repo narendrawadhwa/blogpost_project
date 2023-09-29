@@ -1,6 +1,6 @@
 // opening part B that is Post List
 function openPostList() {
-  window.location.href = "../upgrad_project/html/postslist.html"; 
+  window.location.href = "html/postslist.html"; 
 }
 
 
